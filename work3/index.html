@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<form action="">
+		姓名:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" placeholder="请输入你的姓名" style="width:178px; height:18px;">
+		<br><br>
+		性别：&nbsp;&nbsp;<input type="radio" name="sex" value="1">男
+		<img src="ptr/man.jpg"/>
+		<input type="radio" name="sex" value="0">女
+		<img  src="ptr/women.jpg"/>
+		<br><br>
+		年龄:&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" max="100" min="0" step="1" 
+		        id="age"  value="18" style="width:178px; height:18px;" >
+	   <br><br>
+	   生日： <select >
+					 <option value="">--请选择年份--</option>
+					 <script>
+						 var a=new Date().getFullYear();
+						 for(i=1949;i<a;i++)
+						 document.write(" <option>"+i+"</option>")
+					</script>
+					</select>
+					<select >
+						<option name="yue" value="">--请选择月份--</option>
+						<script>
+				            for(j=1;j<13;j++)
+							document.write(" <option>"+j+"</option>")
+					 </script>
+				 </select>
+				 <select >
+				 						<option value="">--请选择日期--</option>
+				 						<script>
+				         
+							             	for(n=1;n<=31;n++)
+				 							document.write(" <option>"+n+"</option>")
+						
+				 					 </script>
+				 </select>
+		<br ><br>
+		爱好：
+		<input type="checkbox" name="hobby" value="1">旅游
+		<input type="checkbox" name="hobby" value="2">登山
+		<input type="checkbox" name="hobby" value="3">健身
+		<input type="checkbox" name="hobby" value="4">上网
+		<input type="checkbox" name="hobby" value="5">游泳
+		<br ><br>
+		Email：<input type=“email”   required placeholder=“qq账号@qq.com”  style="width:178px; height:18px;"/>
+		<br><br>
+		个人简介：
+		<br ><br><textarea name="comment"  rows="6" cols="35" id="ziwo">请输入你的个人介绍:</textarea>
+		<br><br>
+		<input type="checkbox">我同意录入信息</label>
+		<br /><br />
+		<input type="submit" style="background-color:#87CEFA;font:20px 宋体;" value="完成注册" />
+		<input type="reset" style="background-color:#87CEFA;font:20px 宋体;" value="重新输入" />
+		
+		</form>
+	
+
+		
+	</head>
+	<body>
+		
+	</body>
+</html>
