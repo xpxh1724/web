@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字电子时钟</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+        }
+
+        div {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border: 5px double #ccc;
+            border-radius: 30px;
+            background-color: chocolate;
+			color: lightblue;
+            width: 650px;
+            top: 50%;
+            left: 50%;
+            margin: -160px 0 0 -320px;
+            position: absolute;
+            font-size: 45px;
+            box-shadow: 0 10px 10px  #ccc;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            -webkit-box-reflect: below 0 -webkit-linear-gradient(transparent, transparent 0%, rgba(255, 255, 255, .3));
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="clock"></div>
+
+</body>
+<script>
+    function getDate() {
+        var data = new Date(); //获取当前时间
+        var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var a = new Date().toLocaleString();  //转换格式
+        document.getElementById('clock').innerHTML = a + ' ' + week[data.getDay()]
+    }
+    getDate();
+    //使用定时器每秒向div写入当前时间
+    setInterval("getDate()", 1000);
+</script>
+
+</html>
