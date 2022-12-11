@@ -16,9 +16,13 @@
 			img.src = "img/image.png";
 
 			img.onload = function() {
-				big()
+				start()
 			}
-			
+			function start()
+			{
+				  setTimeout("alert('请小何欣赏跳动的心')", 100)
+					setTimeout("big()", 500)
+			}
             
 			function big() {
 				ctx.clearRect(40, 40, 300, 300);
