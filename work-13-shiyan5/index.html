@@ -1,9 +1,47 @@
-<!DOCTYPE html><html>	<head>		   		<meta charset="utf-8">		    <title>xp-跳动的心</title>	</head>	<body>		    <canvas id="c" width=500px" height="400px"></canvas>		    <script>			var canvas = document.querySelector('#c');			var ctx = canvas.getContext('2d');			let img = new Image();			img.src = "img/image.png";			img.onload = function() {				start()			}			function start()
+<!DOCTYPE html>
+<html>
+
+	<head>
+		   
+		<meta charset="utf-8">
+		    <title>xp-跳动的心</title>
+
+	</head>
+	<body>
+		    <canvas id="c" width=500px" height="400px"></canvas>
+		    <script>
+			var canvas = document.querySelector('#c');
+			var ctx = canvas.getContext('2d');
+			let img = new Image();
+			img.src = "img/image.png";
+
+			img.onload = function() {
+				start()
+			}
+			function start()
 			{
 				  setTimeout("alert('请小何欣赏跳动的心')", 100)
 					setTimeout("big()", 500)
-			}            			function big() {				ctx.clearRect(40, 40, 300, 300);				ctx.drawImage(img, 60, 20, 400, 400);				setTimeout("small()", 400)			}			function small() {				ctx.clearRect(60, 40, 400, 400);				ctx.drawImage(img, 80, 40, 350, 350);				setTimeout("big()", 400)			}		</script>	</body>	    <style>		canvas 
-		{			display: block;		}
+			}
+            
+			function big() {
+				ctx.clearRect(40, 40, 300, 300);
+				ctx.drawImage(img, 60, 20, 400, 400);
+				setTimeout("small()", 400)
+			}
+
+			function small() {
+				ctx.clearRect(60, 40, 400, 400);
+				ctx.drawImage(img, 80, 40, 350, 350);
+				setTimeout("big()", 400)
+			}
+		</script>
+	</body>
+	    <style>
+		canvas 
+		{
+			display: block;
+		}
 		
 		body
 		{	
@@ -13,4 +51,6 @@
 		body:hover
 		{	
 			background-color: cornflowerblue;
-		}	</style></html>
+		}
+	</style>
+</html>
